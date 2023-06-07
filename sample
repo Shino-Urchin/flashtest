@@ -1,0 +1,18 @@
+import random 
+d = {
+    'desk':'つくえ',
+     'chair':'いす',
+     'school':'がっこう',
+}
+while len(d)>0:
+    word = random.choice(list(d.keys()))
+    print(word)
+    answer = input()
+    if answer == '0':
+        print('終了します')
+        break
+    elif answer == d[word]:
+        print('正解')
+        d.pop(word)
+    else:
+        print('不正解　もう一度')
